@@ -69,7 +69,7 @@
 								}%>	
 							</span>
 						</h2>
-						<textarea name="txtOut" disabled id="textOutput"></textarea>		
+						<textarea name="txtOut" id="text"></textarea>		
 					</div>
 				</div>
 			</form>
@@ -106,6 +106,7 @@
 			  body: formData
 			});
 			const text = await res.text();
+			document.getElementById("text").innerHTML=text;
 			console.log(text);
 		}
 		
